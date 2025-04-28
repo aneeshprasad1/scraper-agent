@@ -14,7 +14,7 @@ def test_basic_scraping():
         print(f"Basic scraping result: {result}")
         assert result == "Example Domain"
 
-def test_click_and_wait():
+def test_interactive_scraping():
     """Test clicking and waiting for elements."""
     instructions = """
     Go to https://www.python.org
@@ -25,7 +25,7 @@ def test_click_and_wait():
     
     with ScraperAgent(parse_english_instructions(instructions)) as agent:
         result = agent.run()
-        print(f"Click and wait result: {result}")
+        print(f"Interactive scraping result: {result}")
         assert result is not None
 
 def test_number_extraction():
@@ -41,31 +41,15 @@ def test_number_extraction():
         print(f"Number extraction result: {result}")
         assert result is not None
 
-def test_custom_scraper():
-    """Example of creating a custom scraper for any website."""
-    # You can modify these instructions for any website
-    instructions = """
-    Go to https://www.python.org
-    Wait for #downloads
-    Extract text from #downloads h1
-    """
-    
-    with ScraperAgent(parse_english_instructions(instructions)) as agent:
-        result = agent.run()
-        print(f"\nCustom scraper result: {result}")
-
 if __name__ == "__main__":
     print("Running scraper agent tests...")
     print("\n1. Testing basic scraping:")
     test_basic_scraping()
     
-    print("\n2. Testing click and wait:")
-    test_click_and_wait()
+    print("\n2. Testing interactive scraping:")
+    test_interactive_scraping()
     
     print("\n3. Testing number extraction:")
     test_number_extraction()
-    
-    print("\n4. Testing custom scraper:")
-    test_custom_scraper()
     
     print("\nAll tests completed!") 
