@@ -20,7 +20,7 @@ Write the steps you want, the agent figures out the rest.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/scraper-agent.git
+git clone https://github.com/aneeshprasad1/scraper-agent.git
 cd scraper-agent
 ```
 
@@ -106,4 +106,4 @@ scraper-agent/
 MIT License
 
 ## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request. 
+Contributions are welcome! Please feel free to submit a Pull Request.
